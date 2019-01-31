@@ -1,7 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-}
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -21,14 +17,8 @@ body {
 .navbar__hr {
   width: 15%;
 }
-section{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 .leftsection {
-  background-color: #f7f7f7;
-  
+
 }
 .leftsection__range {
 
@@ -38,8 +28,4 @@ section{
 }
 .leftsection__scores {
 
-}
-.rightsection {
-  display: flex;
-  flex-direction: column;
 }

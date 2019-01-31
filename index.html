@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head> 
-  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <title>Number Guesser</title>
 </head>
 <body>
-<nav>
-  <h1>Number Guesser</h1>
-  <p>Ultimate Challenger Edition</p>
+<nav class="navbar">
+  <h1 class="navbar__txt"><span class="navbar__thick-txt">Number</span>Guesser</h1>
+  <hr class="navbar__hr"><p>Ultimate Challenger Edition</p><hr class="navbar__hr">
 </nav>
 <section>
   <article>
@@ -40,7 +44,7 @@
     <button>Reset Game</button>
     <button>Clear Game</button>
   </article>
-  <article>
+  <article class="leftsection__scores">
     <p> Latest Score </p>
     <p class="displayPlayerOneName">Challenger 1 Name</p>
     <p class="bigPinkPlayerOne">TK</p>
@@ -48,6 +52,6 @@
     <p class="bigPinkPlayerTwo">TK</p>
   </article>
 </section>
-<section></section>
+<section class="rightsection"></section>
 </body>
 </html>
