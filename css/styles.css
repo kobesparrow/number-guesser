@@ -1,31 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 body {
   font-family: 'Open Sans', sans-serif;
 }
+
 .navbar {
   height: 7rem;
   background-color: #404041;
   text-align: center;
 }
+
 .navbar__txt {
   color :#dd1972;
   font-weight: 300;
   font-size: 3rem;
+  margin: 0;
 }
+
 .navbar__thick-txt {
   font-weight: 700;
 }
-.navbar__hr {
-  width: 15%;
-}
-.leftsection {
 
+.byline {
+  color: #dfdfdf;
 }
+
+.lines span {
+  position: relative;
+  display: inline-block;
+}
+
+.lines span:before {
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #f7f7f7;
+    top: 50%;
+    width: 25%;
+    margin: 0 -65px;
+}
+
+.lines span:after {
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #f7f7f7;
+    top: 50%;
+    width: 25%;
+    margin: 0 5px;
+  }
+
+.row {
+  display: flex;
+}
+
+.column-left {
+  flex: 50%;
+  background-color: #f7f7f7;
+  height: 100vh;
+  border: 1px solid #404041;
+}
+
+.column-right {
+  display: flex;
+  flex: 50%;
+  background-color: #d1d2d4;
+}
+
 .leftsection__range {
+  background-color: #fff;
+  height: 9rem;
+  margin: 1rem 1rem;
+  border: 1px solid #d1d2d4;
+}
+
+.range {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #404041;
+  padding: .5rem;
+}
+label {
+  width: auto;
+  float: left;
+  padding: .5rem;
+}
+.label__txt{
+  display: block;
+  margin: 0 0 .2rem;
+  font-size: 1.2rem;
+}
+
+.value-input__range {
+  width: 60%; 
+  padding: .5rem;
 
 }
+
 .leftsection__users {
+  background-color: #fff;
+  height: 21rem;
+  margin: 1rem 1rem;
+  border: 1px solid #d1d2d4;
+}
+
+.name-entry {
+  width: 15rem;
+  padding: .5rem;
+}
+
+.value-input__guess {
+  width: 8rem; 
+  padding: .5rem;
 
 }
+
 .leftsection__scores {
+  background-color: #fff;
+  height: 12rem;
+  margin: 1rem 1rem;
+  border-right: 1px solid #d1d2d4;
+}
+
+.current-range {
+  margin: .7rem;
+}
+
+.challenger {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #404041;
+  padding: .1rem  0 .1rem .5rem;
+}
+.vertical-line {
+  border-left: 1px solid #d1d2d4;
+  height: 85%;
+  width: 1px;
+  margin-left: 50%;
+  margin-top: -6%;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
