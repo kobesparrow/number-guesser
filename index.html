@@ -16,33 +16,36 @@
       <label for="min">Min Range</label>
       <input type="text" id="leftsection__range--minimum" name="Min Range">
       <label for="max">Max Range</label>
-      <input type="text" id="Max" name="Max Range">
-      <button>Update</button>
+      <input type="text" id="leftsecton__range--maximumx" name="Max Range">
+      <button class="leftsecton__range--button">Update</button>
     </form>
   </article>
   <article>
-    <p>The current range is ... to ...</p>
+    <p>The current range is <span id="leftsection__users--lowRange"> 00</span> to <span id="leftsection__users--highRange"> 00 </span></p>
     <h2>Challenger 1</h2>
     <form>
       <label for="name">Name</label>
-      <input type="text" id="name" name="name">
+      <input type="text" id="playerOneEnteredName" name="name">
       <label for="guess">Guess</label>
-      <input type="text" id="guess" name="guess">
+      <input type="text" id="playerOneGuess" name="guess">
     </form>
     <h2>Challenger 2</h2>
     <form>
       <label for="name">Name</label>
-      <input type="text" id="name" name="name">
+      <input type="text" id="playerTwoEnteredName" name="name">
       <label for="guess">Guess</label>
-      <input type="text" id="guess" name="guess">
+      <input type="text" id="playerTwoGuess" name="guess">
     </form>
-    <button>Submit Guess</button>
+    <button class="submitGuess">Submit Guess</button>
     <button>Reset Game</button>
     <button>Clear Game</button>
   </article>
   <article>
     <p> Latest Score </p>
-    <p>Challenger 1 Name</p>
+    <p class="displayPlayerOneName">Challenger 1 Name</p>
+    <p class="bigPinkPlayerOne">TK</p>
+    <p class="displayPlayerTwoName">Challenger 2 Name</p>
+    <p class="bigPinkPlayerTwo">TK</p>
   </article>
 </section>
 <section></section>
