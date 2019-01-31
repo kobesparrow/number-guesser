@@ -7,66 +7,66 @@
   <title>Number Guesser</title>
 </head>
 <body>
-<nav class="navbar">
-  <h1 class="navbar__txt"><span class="navbar__thick-txt">Number</span>Guesser</h1>
-<p class="byline lines"><span>ULTIMATE CHALLENGER EDITION</span></p>
-</nav>
-<section class="row">
-  <section class="column-left">
-    <article class="leftsection__range">
-      <p class="range"> Set Range</p>
-      <form>
-        <label for="min">
-          <span class="label__txt">Min Range</span>
-          <input type="text" class="value-input__range" id="min">
-        </label>
-        <label for="max">
-          <span class="label__txt">Max Range</span>
-          <input type="text" class="value-input__range"id="max">
-        </label>
-        <button> Update</button>
-      </form>
-    </article>
-    <article class="leftsection__users">
-      <p class="current-range">The Current Range is <span>1</span> to <span>100</span> </p>
-      <p class="challenger"> Challenger 1 </p>
-      <form>
-        <label for="name">
-          <span class="label__txt">Name</span>
-          <input type="text" class="name-entry" id="name">
-        </label>
-        <label for="guess">
-          <span class="label__txt">Guess</span>
-          <input type="text" class="value-input__guess" id="guess">
-        </label>
-      </form>
-      <p class="challenger"> Challenger 2 </p>
-      <form>
-        <label for="name">
-          <span class="label__txt">Name</span>
-          <input type="text" class="name-entry" id="name">
-        </label>
-        <label for="guess">
-          <span class="label__txt">Guess</span>
-          <input type="text" class="value-input__guess" id="guess">
-        </label>
-      </form>
-    </article>
-    <article class="leftsection__scores">
-      <p class="range">Latest Score</p>
-      <p>Challenger 1 Name</p>
-      <p> current guess </p>
-      <p>97</p>
-      <p>that's too high</p>
-      <hr class="vertical-line">
-      <p>Challenger 2 Name</p>
-      <p> current guess </p>
-      <p>3</p>
-      <p>that's too low</p>
-    </article>
+  <nav class="navbar">
+    <h1 class="navbar__txt"><span class="navbar__thick-txt">Number</span>Guesser</h1>
+    <p class="navbar__ultimateedition"><span>ULTIMATE CHALLENGER EDITION</span></p>
+  </nav>
+  <section class="bothcolumns">
+    <section class="column-left">
+      <article class="column-left__range">
+        <p class="column-left__range--header"> Set Range</p>
+        <form>
+          <label for="min">
+            <span class="column-left__input-header-text">Min Range</span>
+            <input type="text" class="column-left__range--highlowinputs" id="min">
+          </label>
+          <label for="max">
+            <span class="column-left__input-header-text">Max Range</span>
+            <input type="text" class="column-left__range--highlowinputs"id="max">
+          </label>
+          <button>Update</button>
+        </form>
+      </article>
+      <article class="column-left__users">
+        <p class="column-left__range--currentrange-statement">The Current Range is <span class="displayLow">1</span> to <span class="TKTKTK">100</span> </p>
+        <p class="challenger"> Challenger 1 </p>
+        <form>
+          <label for="name">
+            <span class="column-left__input-header-text">Name</span>
+            <input type="text" class="name-entry" id="name">
+          </label>
+          <label for="guess">
+            <span class="column-left__input-header-text">Guess</span>
+            <input type="text" class="value-input__guess" id="guess">
+          </label>
+        </form>
+        <p class="challenger"> Challenger 2 </p>
+        <form>
+          <label for="name">
+            <span class="column-left__input-header-text">Name</span>
+            <input type="text" class="name-entry" id="name">
+          </label>
+          <label for="guess">
+            <span class="column-left__input-header-text">Guess</span>
+            <input type="text" class="value-input__guess" id="guess">
+          </label>
+        </form>
+      </article>
+      <article class="leftsection__scores">
+        <p class="range">Latest Score</p>
+        <p>Challenger 1 Name</p>
+        <p> current guess </p>
+        <p>97</p>
+        <p>that's too high</p>
+        <hr class="vertical-line">
+        <p>Challenger 2 Name</p>
+        <p> current guess </p>
+        <p>3</p>
+        <p>that's too low</p>
+      </article>
+    </section>
+    <section class="column-right">
+    </section>
   </section>
-  <section class="column-right">
-  </section>
-</section>
 </body>
 </html>
