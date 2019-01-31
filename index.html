@@ -1,57 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head> 
-
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
-
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <title>Number Guesser</title>
 </head>
 <body>
 <nav class="navbar">
   <h1 class="navbar__txt"><span class="navbar__thick-txt">Number</span>Guesser</h1>
-  <hr class="navbar__hr"><p>Ultimate Challenger Edition</p><hr class="navbar__hr">
+<p class="byline lines"><span>ULTIMATE CHALLENGER EDITION</span></p>
 </nav>
-<section>
-  <article>
-    <p>Set Range</p>
-    <form>
-      <label for="min">Min Range</label>
-      <input type="text" id="leftsection__range--minimum" name="Min Range">
-      <label for="max">Max Range</label>
-      <input type="text" id="leftsecton__range--maximumx" name="Max Range">
-      <button class="leftsecton__range--button">Update</button>
-    </form>
-  </article>
-  <article>
-    <p>The current range is <span id="leftsection__users--lowRange"> 00</span> to <span id="leftsection__users--highRange"> 00 </span></p>
-    <h2>Challenger 1</h2>
-    <form>
-      <label for="name">Name</label>
-      <input type="text" id="playerOneEnteredName" name="name">
-      <label for="guess">Guess</label>
-      <input type="text" id="playerOneGuess" name="guess">
-    </form>
-    <h2>Challenger 2</h2>
-    <form>
-      <label for="name">Name</label>
-      <input type="text" id="playerTwoEnteredName" name="name">
-      <label for="guess">Guess</label>
-      <input type="text" id="playerTwoGuess" name="guess">
-    </form>
-    <button class="submitGuess">Submit Guess</button>
-    <button>Reset Game</button>
-    <button>Clear Game</button>
-  </article>
-  <article class="leftsection__scores">
-    <p> Latest Score </p>
-    <p class="displayPlayerOneName">Challenger 1 Name</p>
-    <p class="bigPinkPlayerOne">TK</p>
-    <p class="displayPlayerTwoName">Challenger 2 Name</p>
-    <p class="bigPinkPlayerTwo">TK</p>
-  </article>
+<section class="row">
+  <section class="column-left">
+    <article class="leftsection__range">
+      <p class="range"> Set Range</p>
+      <form>
+        <label for="min">
+          <span class="label__txt">Min Range</span>
+          <input type="text" class="value-input__range" id="min">
+        </label>
+        <label for="max">
+          <span class="label__txt">Max Range</span>
+          <input type="text" class="value-input__range"id="max">
+        </label>
+        <button> Update</button>
+      </form>
+    </article>
+    <article class="leftsection__users">
+      <p class="current-range">The Current Range is <span>1</span> to <span>100</span> </p>
+      <p class="challenger"> Challenger 1 </p>
+      <form>
+        <label for="name">
+          <span class="label__txt">Name</span>
+          <input type="text" class="name-entry" id="name">
+        </label>
+        <label for="guess">
+          <span class="label__txt">Guess</span>
+          <input type="text" class="value-input__guess" id="guess">
+        </label>
+      </form>
+      <p class="challenger"> Challenger 2 </p>
+      <form>
+        <label for="name">
+          <span class="label__txt">Name</span>
+          <input type="text" class="name-entry" id="name">
+        </label>
+        <label for="guess">
+          <span class="label__txt">Guess</span>
+          <input type="text" class="value-input__guess" id="guess">
+        </label>
+      </form>
+    </article>
+    <article class="leftsection__scores">
+      <p class="range">Latest Score</p>
+      <p>Challenger 1 Name</p>
+      <p> current guess </p>
+      <p>97</p>
+      <p>that's too high</p>
+      <hr class="vertical-line">
+      <p>Challenger 2 Name</p>
+      <p> current guess </p>
+      <p>3</p>
+      <p>that's too low</p>
+    </article>
+  </section>
+  <section class="column-right">
+  </section>
 </section>
-<section class="rightsection"></section>
 </body>
 </html>
