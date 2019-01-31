@@ -23,13 +23,32 @@ body {
   font-weight: 700;
 }
 
-.navbar__hr {
-  width: 100%;
-}
-
 .byline {
   color: #dfdfdf;
 }
+
+.lines span {
+  position: relative;
+  display: inline-block;
+}
+
+.lines span:before {
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #f7f7f7;
+    top: 50%;
+    width: 25%;
+    margin: 0 -65px;
+}
+
+.lines span:after {
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #f7f7f7;
+    top: 50%;
+    width: 25%;
+    margin: 0 5px;
+  }
 
 .row {
   display: flex;
@@ -73,7 +92,7 @@ label {
 }
 
 .value-input__range {
-  width: 8rem; 
+  width: 60%; 
   padding: .5rem;
 
 }
