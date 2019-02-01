@@ -23,7 +23,7 @@ body {
   font-weight: 700;
 }
 
-.byline {
+.navbar__ultimateedition {
   color: #dfdfdf;
 }
 
@@ -67,37 +67,39 @@ body {
   background-color: #d1d2d4;
 }
 
-.leftsection__range {
+.column-left__range {
   background-color: #fff;
   height: 9rem;
   margin: 1rem 1rem;
   border: 1px solid #d1d2d4;
 }
 
-.range {
+.column-left__range-and-latest-score {
   font-weight: 700;
   font-size: 1.2rem;
   color: #404041;
   padding: .5rem;
 }
+
 label {
   width: auto;
   float: left;
   padding: .5rem;
 }
-.label__txt{
+
+.column-left__input-header-text {
   display: block;
   margin: 0 0 .2rem;
   font-size: 1.2rem;
 }
 
-.value-input__range {
+.column-left__range--highlowinputs {
   width: 60%; 
   padding: .5rem;
 
 }
 
-.leftsection__users {
+.column-left__users {
   background-color: #fff;
   height: 21rem;
   margin: 1rem 1rem;
@@ -122,16 +124,17 @@ label {
   border-right: 1px solid #d1d2d4;
 }
 
-.current-range {
+.column-left__range--currentrange-statement {
   margin: .7rem;
 }
 
-.challenger {
+.column-left__challengerheadertext {
   font-weight: 700;
   font-size: 1.3rem;
   color: #404041;
   padding: .1rem  0 .1rem .5rem;
 }
+
 .vertical-line {
   border-left: 1px solid #d1d2d4;
   height: 85%;
