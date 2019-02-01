@@ -1,7 +1,9 @@
 
+var playerOneGuess = document.querySelector('.playerOneGuess');
 var minRangeInput = document.querySelector('.leftsection__range--minimum');
 var maxRangeInput = document.querySelector('.leftsection__range--maximum');
 var updateButton = document.querySelector('.update-button');
+var randomNumber = generateRandom(minRange, maxRange);
 var displayLow = document.querySelector('.leftsection__users--lowRange');
 var displayHigh = document.querySelector('.leftsection__users--highRange');
 var min = document.getElementById('min');
@@ -21,9 +23,7 @@ function generateRandom(min, max) {
 }
 
 console.log(randomNumber);
-var randomNumber = generateRandom(minRange, maxRange);
 
-var playerOneGuess = document.querySelector('.playerOneGuess');
 var playerTwoGuess = document.querySelector('.playerTwoGuess');
 var submitGuessButton = document.querySelector('.submitGuess');
 var displayPlayerOneGuess = document.querySelector('.bigPinkPlayerOne')
