@@ -1,9 +1,11 @@
 
 var minRangeInput = document.querySelector('.leftsection__range--minimum');
 var maxRangeInput = document.querySelector('.leftsection__range--maximum');
-var updateButton = document.querySelector('.leftsection__range--button');
+var updateButton = document.querySelector('.update-button');
 var displayLow = document.querySelector('.leftsection__users--lowRange');
-var displayHigh = document.querySeletor('.leftsection__users--highRange');
+var displayHigh = document.querySelector('.leftsection__users--highRange');
+var min = document.getElementById('min');
+var max = document.getElementById('max');
 
 updateButton.addEventListener('click', function() {
   var minRangeString = minRangeInput.value;
@@ -15,11 +17,10 @@ updateButton.addEventListener('click', function() {
 })
 
 function generateRandom(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+console.log(randomNumber);
 var randomNumber = generateRandom(minRange, maxRange);
 
 var playerOneGuess = document.querySelector('.playerOneGuess');
@@ -45,20 +46,23 @@ submitGuessButton.addEventListener('click', function() {
   challengerTwoDisplay.innertext="playerTwoname";
 })  
 
-if (challengerOneInt < randomNumber) {
-  TKTKTK("that's too high");
+function checkNumber1() {
+if (challengerOneInt === randomNumber) {
+  return "Boom!";
 } else if (challengerOneInt > randomNumber) {
-  TKTKTKTK("that's too low");
+  return "that's too high";
 } else {
-   ENDOFGAMEFUNCTION 
+  return "that's too low";
+  }
 }
-
-if (challengerTwoInt < randomNumber) {
-  TKTKTK("that's too high");
+  
+function checkNumber2() {
+if (challengerTwoInt === randomNumber) {
+  return "Boom!";
 } else if (challengerTwoInt > randomNumber) {
-  TKTKTKTK("that's too low");
+    return "that's too high!";
 } else {
-   ENDOFGAMEFUNCTION 
+    return "that's too low!";
+  }
 }
-
 
