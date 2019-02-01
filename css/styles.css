@@ -74,7 +74,7 @@ body {
   border: 1px solid #d1d2d4;
 }
 
-.column-left__range--header {
+.column-left__range-and-latest-score {
   font-weight: 700;
   font-size: 1.2rem;
   color: #404041;
@@ -128,7 +128,7 @@ label {
   margin: .7rem;
 }
 
-.challenger {
+.column-left__challengerheadertext {
   font-weight: 700;
   font-size: 1.3rem;
   color: #404041;
