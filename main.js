@@ -1,29 +1,7 @@
 
 var playerOneGuess = document.querySelector('.value-input__guess');
-var minRangeInput = document.querySelector('.column-left__range--highlowinputs');
-var maxRangeInput = document.querySelector('.column-left__range--highlowinputs');
 var updateButton = document.querySelector('.update-button');
-var randomNumber = generateRandom(minRange, maxRange);
-var displayLow = document.querySelector('.displayLow');
-var displayHigh = document.querySelector('.displayHigh');
-var min = document.getElementById('min');
-var max = document.getElementById('max');
-
-updateButton.addEventListener('click', function() {
-  var minRangeString = minRangeInput.value;
-  var minRange = parseInt(minRangeString, 10);
-  var maxRangeString = maxRangeInput.value;
-  var maxRange = parseInt(maxRangeString, 10);
-  displayLow.innerText="minRangeString";
-  displayHigh.innerText="maxRangeString";
-})
-
-function generateRandom(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-
-console.log(randomNumber);
-
+var randomNumber = generateRandom();
 var playerTwoGuess = document.querySelector('.value-input__guess');
 var submitGuessButton = document.querySelector('.submitGuess');
 var displayPlayerOneGuess = document.querySelector('.bigPinkPlayerOne')
@@ -33,18 +11,40 @@ var playerTwonameBox = document.querySelector('.playerTwoEnteredName');
 var challengerOneDisplay = document.querySelector('.displayPlayerOneName')
 var challengerTwoDisplay = document.querySelector('.displayPlayerTwoName')
 
-submitGuessButton.addEventListener('click', function() {
-  var playerOneGuessString = playerOneGuess.value;
-  var playerTwoGuessString = playerTwoGuess.value;
-  var challengerOneInt = parseInt(playerOneGuessString, 10);
-  var challengerTwoInt = parseInt(playerOneGuessString, 10);
-  displayPlayerOneGuess.innertext="playerOneGuessString";
-  displayPlayerTwoGuess.innerText="playerTwoGuessString";
-  var playerOneName = playerOneNameBox.value;
-  var playerTwoName = playerTwoNameBox.value;
-  challengerOneDisplay.innertext="playerOneName";
-  challengerTwoDisplay.innertext="playerTwoname";
-})  
+updateButton.addEventListener('click', function(e) {
+  e.preventDefault();
+  generateRandom();
+  updateMinRangeDisplay();
+  updateMaxRangeDisplay();
+});
+
+function updateMinRangeDisplay() {
+  var minInput = parseInt(document.querySelector('#min').value);
+  var displayLow = document.querySelector('.displayLow');
+  displayLow.innerText = minInput;
+}
+
+function updateMaxRangeDisplay() {
+  var maxInput = parseInt(document.querySelector('#max').value);
+  var displayHigh = document.querySelector('.displayHigh');
+  displayHigh.innerText = maxInput;
+}
+
+function generateRandom(min = 1, max = 100) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+// submitGuessButton.addEventListener('click', function() {
+//   var playerOneGuessString = playerOneGuess.value;
+//   var playerTwoGuessString = playerTwoGuess.value;
+//   var challengerOneInt = parseInt(playerOneGuessString, 10);
+//   var challengerTwoInt = parseInt(playerOneGuessString, 10);
+//   displayPlayerOneGuess.innertext="playerOneGuessString";
+//   displayPlayerTwoGuess.innerText="playerTwoGuessString";
+//   var playerOneName = playerOneNameBox.value;
+//   var playerTwoName = playerTwoNameBox.value;
+//   challengerOneDisplay.innertext="playerOneName";
+//   challengerTwoDisplay.innertext="playerTwoname";
+// })  
 
 function checkNumber1() {
 if (challengerOneInt === randomNumber) {
