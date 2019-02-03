@@ -1,7 +1,10 @@
 
+
+// Global Variables
+
 var playerOneGuess = document.querySelector('.value-input__guess');
-var updateButton = document.querySelector('.update-button');
 var randomNumber = generateRandom();
+var updateButton = document.querySelector('.update-button');
 var playerTwoGuess = document.querySelector('.value-input__guess');
 var submitGuessButton = document.querySelector('.submitGuess');
 var displayPlayerOneGuess = document.querySelector('.bigPinkPlayerOne')
@@ -13,38 +16,29 @@ var challengerTwoDisplay = document.querySelector('.displayPlayerTwoName')
 
 updateButton.addEventListener('click', function(e) {
   e.preventDefault();
-  generateRandom();
-  updateMinRangeDisplay();
-  updateMaxRangeDisplay();
+  var min = parseInt(document.querySelector('#min').value);
+  var max = parseInt(document.querySelector('#max').value);
+  randomNumber = generateRandom(min, max);
+  updateMinRangeDisplay(min);
+  updateMaxRangeDisplay(max);
 });
 
-function updateMinRangeDisplay() {
-  var minInput = parseInt(document.querySelector('#min').value);
+function updateMinRangeDisplay(min) {
+  var minInput = min;
   var displayLow = document.querySelector('.displayLow');
   displayLow.innerText = minInput;
 }
 
-function updateMaxRangeDisplay() {
-  var maxInput = parseInt(document.querySelector('#max').value);
+function updateMaxRangeDisplay(max) { 
+  var maxInput = max;
   var displayHigh = document.querySelector('.displayHigh');
   displayHigh.innerText = maxInput;
 }
 
 function generateRandom(min = 1, max = 100) {
   return Math.floor(Math.random() * (max - min)) + min;
-}
-// submitGuessButton.addEventListener('click', function() {
-//   var playerOneGuessString = playerOneGuess.value;
-//   var playerTwoGuessString = playerTwoGuess.value;
-//   var challengerOneInt = parseInt(playerOneGuessString, 10);
-//   var challengerTwoInt = parseInt(playerOneGuessString, 10);
-//   displayPlayerOneGuess.innertext="playerOneGuessString";
-//   displayPlayerTwoGuess.innerText="playerTwoGuessString";
-//   var playerOneName = playerOneNameBox.value;
-//   var playerTwoName = playerTwoNameBox.value;
-//   challengerOneDisplay.innertext="playerOneName";
-//   challengerTwoDisplay.innertext="playerTwoname";
-// })  
+} 
+
 
 function checkNumber1() {
 if (challengerOneInt === randomNumber) {
