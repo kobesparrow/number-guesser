@@ -11,7 +11,14 @@ var displayPlayerTwoGuess = document.querySelector('.bigPinkPlayerTwo');
 var submitGuessButton = document.querySelector('.submit-guess');
 var leftSectionScores = document.querySelector('#leftsection__scores');
 var resetGameButton = document.querySelector('#resetGameButton-JS');
-var clearGameButton = document.querySelector('#clearGameButton-JS')
+var clearGameButton = document.querySelector('#clearGameButton-JS');
+var p1 = document.querySelector('.player-one-name');
+var p2 = document.querySelector('.player-two-name');
+var g1 = document.querySelector('#guess1');
+var g2 = document.querySelector('#guess2');
+var disableButtons = document.querySelector('.column-left__users');
+
+
 
 // UPDATE button event
 updateButton.addEventListener('click', function(e) {
@@ -21,7 +28,6 @@ updateButton.addEventListener('click', function(e) {
   randomNumber = generateRandom(min, max);
   console.log(min, max)
   updateRangeDisplay(min, max);
-  // updateMaxRangeDisplay(max);
 });
 
 
@@ -56,19 +62,38 @@ submitGuessButton.addEventListener('click', function() {
   var checkNumber2 = checkNumber(parsedNumberTwo);
   displayGuess('player-one', playerOneName, parsedNumberOne, checkNumber1);
   displayGuess('player-two', playerTwoName, parsedNumberTwo, checkNumber2);
+  // resetGameButton.disabled=false;
+  // resetGameButton.disabled=false;
 })
 
 // RESET game event
 resetGameButton.addEventListener('click', function() {
-
+  clearGame()
+  generateRandom()
+  resetGameButton.disabled=true;
+  clearGameButton.disabled=true
 })
 
-// 
-clearGameButton.addEventListener('click', function() {
-  var playerOneName = document.querySelector('player-one-name').value;
-  var playerTwoName = document.querySelector('player-two-name').value;
+clearGameButton.addEventListener('click', clearGame())
 
-})
+function clearGame() {
+  p1.value="";
+  p2.value="";
+  g1.value="";
+  g2.value="";
+}
+
+function disableBtn() {
+  if (p1.value || p2.value || g1.value || g2.value){
+    resetGameButton.disabled=false;
+    clearGameButton.disabled=false;
+  } else {
+    resetGameButton.disabled=true;
+    clearGameButton.disabled=true;
+  }
+}
+
+disableButtons.addEventListener('keyup', disableBtn());
 
 function checkNumber(challengerGuess) {
 if (challengerGuess === randomNumber) {
