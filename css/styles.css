@@ -6,6 +6,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+/* NAVBAR     */
 .navbar {
   height: 7rem;
   background-color: #404041;
@@ -27,6 +28,7 @@ body {
   color: #dfdfdf;
 }
 
+/*GENERAL STUFF*/
 .lines span {
   position: relative;
   display: inline-block;
@@ -54,8 +56,10 @@ body {
   display: flex;
 }
 
+/*COLUMN LEFT*/
+
 .column-left {
-  width: 50%;
+  width: 470px;
   background-color: #f7f7f7;
   height: 100vh;
   border: 1px solid #404041;
@@ -121,23 +125,52 @@ label {
   padding: .5rem;
 }
 
+/*MIDDLE THIRD*/
+
 .column-left__users {
   background-color: #fff;
   height: 21rem;
   margin: 1rem 1rem;
   border: 1px solid #d1d2d4;
+  padding: 10px;
+}
+
+p.column-left__range--currentrange-statement {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+span.range--display-numbers {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+div.challenger-one-guesses {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+div.challenger-two-guesses {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+div.middle-box--buttons {
+  display: flex;
+  align-items: flex-end;
 }
 
 .name-entry {
-  width: 15rem;
+  width: 17rem;
   padding: .5rem;
 }
 
 .value-input__guess {
   width: 8rem; 
   padding: .5rem;
-
 }
+
+/*BOTTOM THIRD*/
 
 .leftsection__scores {
   background-color: #fff;

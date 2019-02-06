@@ -7,8 +7,10 @@
   <title>Number Guesser</title>
 </head>
 <body>
+
+  <!-- NAVBAR -->
   <nav class="navbar">
-    <h1 class="navbar__txt"><span class="navbar__thick-txt">Number</span>Guesser</h1>
+    <h1 class="navbar__txt"><span class="navbar__thick-txt">NUMBER</span>GUESSER</h1>
     <p class="navbar__ultimateedition"><span>ULTIMATE CHALLENGER EDITION</span></p>
   </nav>
 
@@ -33,9 +35,12 @@
 
       <!-- MIDDLE THIRD -->
       <article class="column-left__users">
-        <p class="column-left__range--currentrange-statement">The Current Range is <span class="displayLow">1</span> to <span>100</span> </p>
-        <p class="column-left__challengerheadertext"> Challenger 1 </p>
-        <form>
+
+        <p class="column-left__range--currentrange-statement">The Current Range is <span class="range--display-numbers">1</span> to <span class="range--display-numbers">100</span> </p>
+        
+        <p class="column-left__challengerheadertext">Challenger 1</p>
+        
+        <div class="challenger-one-guesses">
           <label for="name">
             <span class="column-left__input-header-text">Name</span>
             <input type="text" class="name-entry" id="name">
@@ -44,9 +49,11 @@
             <span class="column-left__input-header-text">Guess</span>
             <input type="text" class="value-input__guess" id="guess">
           </label>
-        </form>
+        </div>
+
         <p class="column-left__challengerheadertext"> Challenger 2 </p>
-        <form>
+
+        <div class="challenger-two-guesses">
           <label for="name">
             <span class="column-left__input-header-text">Name</span>
             <input type="text" class="name-entry" id="name">
@@ -55,7 +62,14 @@
             <span class="column-left__input-header-text">Guess</span>
             <input type="text" class="value-input__guess" id="guess">
           </label>
-        </form>
+        </div>
+
+        <div class="middle-box--buttons">
+          <button class="button-style">SUBMIT GUESS</button>
+          <button class="button-style">RESET GAME</button>
+          <button class="button-style">CLEAR GAME</button>
+        </div>
+
       </article>
 
       <!-- BOTTOM THIRD -->
