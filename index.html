@@ -7,11 +7,12 @@
   <title>Number Guesser</title>
 </head>
 <body>
-  <nav class="navbar">
-    <h1 class="navbar__txt"><span class="navbar__thick-txt">Number</span>Guesser</h1>
-    <p class="navbar__ultimateedition lines"><span>ULTIMATE CHALLENGER EDITION</span></p>
-  </nav>
 
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h1 class="navbar__txt"><span class="navbar__thick-txt">NUMBER</span>GUESSER</h1>
+    <p class="navbar__ultimateedition"><span>ULTIMATE CHALLENGER EDITION</span></p>
+  </nav>
   <section class="bothcolumns">
     <section class="column-left">
 
@@ -33,45 +34,38 @@
 
       <!-- MIDDLE THIRD -->
       <article class="column-left__users">
-        <div class="flex f-column">
-          <p class="column-left__range--currentrange-statement">The Current Range is <span class="displayLow">1</span> to <span class="displayHigh">100</span> </p>
-          <div class="flex">
-            <p class="column-left__challengerheadertext"> Challenger 1 </p>
-            <form>
-              <label for="name">
-                <span class="column-left__input-header-text">Name</span>
-                <input type="text" class="name-entry player-one-name" id="player-one-name">
-              </label>
-              <label for="guess">
-                <span class="column-left__input-header-text">Guess</span>
-                <input type="number" class="value-input__guess  player-1-guess" id="guess">
-              </label>
-            </form>
-          </div>
-          <div class="flex">
-            <p class="column-left__challengerheadertext"> Challenger 2 </p>
-            <form>
-              <label for="name">
-                <span class="column-left__input-header-text">Name</span>
-                <input type="text" class="name-entry player-two-name" id="name">
-              </label>
-              <label for="guess">
-                <span class="column-left__input-header-text">Guess</span>
-                <input type="number" class="value-input__guess player-2-guess" id="guess">
-              </label>
-            </form>
-          </div>
-          <div class="flex jc-space-between">
-            <button id="submit" class="button-users submit-guess">
-              Submit
-            </button>
-            <button id="reset" class="button-users">
-              Reset
-            </button>
-            <button id="clear" class="button-users">
-              Clear
-            </button>
-          </div>
+        <p class="column-left__range--currentrange-statement">The Current Range is <span class="range--display-numbers displayLow">1</span> to <span class="range--display-numbers displayHigh">100</span> </p>
+        
+        <p class="column-left__challengerheadertext">Challenger 1</p>
+        
+        <div class="challenger-one-guesses">
+          <label for="name">
+            <span class="column-left__input-header-text">Name</span>
+            <input type="text" class="name-entry player--name" id="name">
+          </label>
+          <label for="guess">
+            <span class="column-left__input-header-text">Guess</span>
+            <input type="text" class="value-input__guess player-1-guess" id="guess">
+          </label>
+        </div>
+
+        <p class="column-left__challengerheadertext"> Challenger 2 </p>
+
+        <div class="challenger-two-guesses">
+          <label for="name">
+            <span class="column-left__input-header-text">Name</span>
+            <input type="text" class="name-entry player-two-name" id="name">
+          </label>
+          <label for="guess">
+            <span class="column-left__input-header-text">Guess</span>
+            <input type="text" class="value-input__guess player-2-guess" id="guess">
+          </label>
+        </div>
+
+        <div class="middle-box--buttons">
+          <button class="button-style submit-guess">SUBMIT GUESS</button>
+          <button class="button-style">RESET GAME</button>
+          <button class="button-style">CLEAR GAME</button>
         </div>
       </article>
       
