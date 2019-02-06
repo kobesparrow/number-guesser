@@ -9,33 +9,44 @@ var randomNumber = generateRandom();
 var displayPlayerOneGuess = document.querySelector('.bigPinkPlayerOne');
 var displayPlayerTwoGuess = document.querySelector('.bigPinkPlayerTwo');
 var submitGuessButton = document.querySelector('.submit-guess');
-var leftSectionScores = document.getElementById('leftsection__scores');
+var leftSectionScores = document.querySelector('#leftsection__scores');
+var resetGameButton = document.querySelector('#resetGameButton-JS');
+var clearGameButton = document.querySelector('#clearGameButton-JS')
 
+// UPDATE button event
 updateButton.addEventListener('click', function(e) {
   e.preventDefault();
   var min = parseInt(document.querySelector('#min').value);
   var max = parseInt(document.querySelector('#max').value);
   randomNumber = generateRandom(min, max);
-  updateMinRangeDisplay(min);
-  updateMaxRangeDisplay(max);
+  console.log(min, max)
+  updateRangeDisplay(min, max);
+  // updateMaxRangeDisplay(max);
 });
 
-function updateMinRangeDisplay(min) {
-  var minInput = min;
+
+// Update range display
+function updateRangeDisplay(min, max) {
+  // var minInput = min;
   var displayLow = document.querySelector('.displayLow');
-  displayLow.innerText = minInput;
-}
-
-function updateMaxRangeDisplay(max) { 
-  var maxInput = max;
+  displayLow.innerText = min;
+  // var maxInput = max;
   var displayHigh = document.querySelector('.displayHigh');
-  displayHigh.innerText = maxInput;
+  displayHigh.innerText = max;
 }
 
+// function updateMaxRangeDisplay(max) { 
+  // var maxInput = max;
+  // var displayHigh = document.querySelector('.displayHigh');
+  // displayHigh.innerText = maxInput;
+// }
+
+// our random number
 function generateRandom(min = 1, max = 100) {
   return Math.floor(Math.random() * (max - min)) + min;
 } 
 
+// SUBMIT button event
 submitGuessButton.addEventListener('click', function() {
   var playerOneName = document.querySelector('.player-one-name').value;
   var playerTwoName = document.querySelector('.player-two-name').value;
@@ -45,8 +56,20 @@ submitGuessButton.addEventListener('click', function() {
   var checkNumber2 = checkNumber(parsedNumberTwo);
   displayGuess('player-one', playerOneName, parsedNumberOne, checkNumber1);
   displayGuess('player-two', playerTwoName, parsedNumberTwo, checkNumber2);
+})
+
+// RESET game event
+resetGameButton.addEventListener('click', function() {
 
 })
+
+// 
+clearGameButton.addEventListener('click', function() {
+  var playerOneName = document.querySelector('player-one-name').value;
+  var playerTwoName = document.querySelector('player-two-name').value;
+
+})
+
 function checkNumber(challengerGuess) {
 if (challengerGuess === randomNumber) {
   return "Boom!";
@@ -66,3 +89,13 @@ function displayGuess (player, playerName, playerGuess, result) {
                         </section>`
   leftSectionScores.insertAdjacentHTML('beforeend', playerResults)
 }
+
+// Not a Number alert
+// if (playerOneGuess === NaN) {
+//   alert("Challenger One, please enter a number");
+// }
+// if (playerTwoGuess === NaN) {
+//   alert("Challenger Two, please enter a number.");
+// }
+
+
