@@ -134,10 +134,20 @@ label {
 
 .column-left__users {
   background-color: #fff;
-  height: 21rem;
+  height: 18rem;
   margin: 1rem 1rem;
   border: 1px solid #d1d2d4;
   padding: 10px;
+}
+
+p.column-left__challengerheadertext {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #404041;
+    padding: .5rem;
+    margin-bottom: 0px;
+    margin-left: -8px;
+    margin-top: -20px;
 }
 
 p.column-left__range--currentrange-statement {
@@ -173,18 +183,18 @@ div.middle-box--buttons {
 }
 
 button.triple-button-style {
-    background-color: #D1D2D4;
-    border-radius: 15px;
-    color: white;
-    font-weight: 600;
-    font-size: 14px;
-    transition-duration: .5s;
-    width: auto;
-    height: 33px;
-    margin-left: 8px;
-    margin-right: 8px;
-    padding-right: 38px;
-    padding-left: 38px;
+      background-color: #D1D2D4;
+      border-radius: 15px;
+      color: white;
+      font-weight: 600;
+      font-size: 14px;
+      transition-duration: .5s;
+      width: auto;
+      height: 33px;
+      margin-left: 8px;
+      margin-right: 8px;
+      padding-right: 38px;
+      padding-left: 38px;
 }
 
 button.triple-button-style:hover {
@@ -205,21 +215,24 @@ button.triple-button-style:hover {
 
 /*BOTTOM THIRD*/
 
-.leftsection__scores {
+article.leftsection__scores {
   background-color: #fff;
-  height: 12rem;
+  height: 18rem;
   margin: 1rem 1rem;
-  border-right: 1px solid #d1d2d4;
+  border: 1px solid #d1d2d4;
+  padding: 10px;
 }
 
-.column-left__challengerheadertext {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #404041;
-    padding: .5rem;
-    margin-bottom: 0px;
-    margin-left: -8px;
-    margin-top: -20px;
+div.bottom-section-content {
+  display: flex;
+}
+
+div.bottom-section-challenger-one {
+  align-items: center;
+}
+
+div.bottom-section-challenger-two {
+
 }
 
 .vertical-line {
