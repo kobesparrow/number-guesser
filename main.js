@@ -6,11 +6,9 @@ var playerOneGuess = document.querySelector('.player-1-guess');
 var playerTwoGuess = document.querySelector('.player-2-guess');
 var updateButton = document.querySelector('.update-button');
 var randomNumber = generateRandom();
-var submitGuessButton = document.querySelector('.submit-guess');
 var displayPlayerOneGuess = document.querySelector('.bigPinkPlayerOne');
 var displayPlayerTwoGuess = document.querySelector('.bigPinkPlayerTwo');
-var playerOneName = document.querySelector('.player-one-name').value;
-var playerTwoName = document.querySelector('.player-two-name').value;
+var submitGuessButton = document.querySelector('.submit-guess');
 // var challengerOneDisplay = document.querySelector('.displayPlayerOneName')
 // var challengerTwoDisplay = document.querySelector('.displayPlayerTwoName')
 var leftSectionScores = document.getElementById('leftsection__scores');
@@ -41,13 +39,15 @@ function generateRandom(min = 1, max = 100) {
 } 
 
 submitGuessButton.addEventListener('click', function() {
+  var playerOneName = document.querySelector('.player-one-name').value;
+  var playerTwoName = document.querySelector('.player-two-name').value;
   var parsedNumberOne = Number.parseInt(playerOneGuess.value);
   var parsedNumberTwo = Number.parseInt(playerTwoGuess.value)
   var checkNumber1 = checkNumber(parsedNumberOne);
   var checkNumber2 = checkNumber(parsedNumberTwo);
-  console.log(playerOneName)
-  displayGuess(playerOneName, parsedNumberOne, checkNumber1, "player-one");
-  displayGuess(playerTwoName, parsedNumberTwo, checkNumber2, "player-two");
+  console.log(playerOneName);
+  displayGuess('player-one', playerOneName, parsedNumberOne, checkNumber1);
+  displayGuess('player-two', playerTwoName, parsedNumberTwo, checkNumber2);
 
 })
 function checkNumber(challengerGuess) {
@@ -60,12 +60,11 @@ if (challengerGuess === randomNumber) {
   }
 }
 
-function displayGuess (playerName, playerGuess, result, player) {
-  console.log(playerName,playerGuess, result, player)
+function displayGuess (player, playerName, playerGuess, result) {
   var playerResults = `<section class="${player}"> 
                           <p class="display-player-name">${playerName}</p>
                           <p class="current-guess">current guess</p>
-                          <p class="big-pink-number>${playerGuess}</p>
+                          <p class="big-pink-number">${playerGuess}</p>
                           <p class ="player-result">${result}</p>
                         </section>`
   leftSectionScores.insertAdjacentHTML('beforeend', playerResults)
