@@ -35,11 +35,11 @@
             <form>
               <label for="name">
                 <span class="column-left__input-header-text">Name</span>
-                <input type="text" class="name-entry" id="name">
+                <input type="text" class="name-entry player-one-name" id="player-one-name">
               </label>
               <label for="guess">
                 <span class="column-left__input-header-text">Guess</span>
-                <input type="text" class="value-input__guess" id="guess">
+                <input type="number" class="value-input__guess  player-1-guess" id="guess">
               </label>
             </form>
           </div>
@@ -48,16 +48,16 @@
             <form>
               <label for="name">
                 <span class="column-left__input-header-text">Name</span>
-                <input type="text" class="name-entry" id="name">
+                <input type="text" class="name-entry player-two-name" id="name">
               </label>
               <label for="guess">
                 <span class="column-left__input-header-text">Guess</span>
-                <input type="text" class="value-input__guess" id="guess">
+                <input type="number" class="value-input__guess player-2-guess" id="guess">
               </label>
             </form>
           </div>
           <div class="flex jc-space-between">
-            <button id="submit" class="button-users">
+            <button id="submit" class="button-users submit-guess">
               Submit
             </button>
             <button id="reset" class="button-users">
@@ -69,13 +69,14 @@
           </div>
         </div>
       </article>
-      <article class="leftsection__scores">
-        <p class="column-left__range-and-latest-score">Latest Score</p>
-        <p class="displayPlayerOne">Challenger 1 Name</p>
-        <p> current guess </p>
-        <p class ="bigPinkPlayerOne">97</p>
-        <p>that's too high</p>
-        <hr class="vertical-line">
+      <article class="leftsection__scores" id="leftsection__scores">
+          <p class="column-left__score"></p>
+     <!--    <section>
+          <p class="display-player-name"></p>
+          <p class="current-guess">current guess</p>
+          <p class ="big-pink-number"></p>
+          <p class="player-result"></p>
+        </section>   -->
         <!-- <p class="displayPlayerTwo">Challenger 2 Name</p>
         <p> current guess </p>
         <p class="BigPinkPLayerTwo">3</p>
