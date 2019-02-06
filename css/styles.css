@@ -112,7 +112,7 @@ article.column-left__range {
 }
 
 button.button-style {
-    background-color: #D1D2D4;
+    background-color: #7F7F7F;
     border-radius: 15px;
     color: white;
     font-weight: 600;
@@ -124,9 +124,9 @@ button.button-style {
     margin-right: 20px;
 }
 
-button.button-style:hover {
+/*button.button-style:hover {
   background-color: #7F7F7F; 
-}
+}*/
 
 div.range--inputs {
   display: flex;
@@ -217,7 +217,7 @@ div.middle-box--buttons {
 }
 
 button.triple-button-style {
-      background-color: #D1D2D4;
+      background-color: #7F7F7F;
       border-radius: 15px;
       color: white;
       font-weight: 600;
@@ -231,10 +231,9 @@ button.triple-button-style {
       padding-left: 38px;
 }
 
-button.triple-button-style:hover {
+/*button.triple-button-style:hover {
   background-color: #7F7F7F; 
-
-}
+}*/
 
 .name-entry {
   width: 15rem;
