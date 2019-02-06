@@ -179,6 +179,8 @@ label {
   height: 12rem;
   margin: 1rem 1rem;
   border-right: 1px solid #d1d2d4;
+  display: flex;
+  position: relative;
 }
 
 .column-left__range--currentrange-statement {

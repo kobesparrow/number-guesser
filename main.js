@@ -9,8 +9,6 @@ var randomNumber = generateRandom();
 var displayPlayerOneGuess = document.querySelector('.bigPinkPlayerOne');
 var displayPlayerTwoGuess = document.querySelector('.bigPinkPlayerTwo');
 var submitGuessButton = document.querySelector('.submit-guess');
-// var challengerOneDisplay = document.querySelector('.displayPlayerOneName')
-// var challengerTwoDisplay = document.querySelector('.displayPlayerTwoName')
 var leftSectionScores = document.getElementById('leftsection__scores');
 
 updateButton.addEventListener('click', function(e) {
@@ -42,10 +40,9 @@ submitGuessButton.addEventListener('click', function() {
   var playerOneName = document.querySelector('.player-one-name').value;
   var playerTwoName = document.querySelector('.player-two-name').value;
   var parsedNumberOne = Number.parseInt(playerOneGuess.value);
-  var parsedNumberTwo = Number.parseInt(playerTwoGuess.value)
+  var parsedNumberTwo = Number.parseInt(playerTwoGuess.value);
   var checkNumber1 = checkNumber(parsedNumberOne);
   var checkNumber2 = checkNumber(parsedNumberTwo);
-  console.log(playerOneName);
   displayGuess('player-one', playerOneName, parsedNumberOne, checkNumber1);
   displayGuess('player-two', playerTwoName, parsedNumberTwo, checkNumber2);
 
