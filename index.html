@@ -13,13 +13,12 @@
     <h1 class="navbar__txt"><span class="navbar__thick-txt">NUMBER</span>GUESSER</h1>
     <p class="navbar__ultimateedition"><span>ULTIMATE CHALLENGER EDITION</span></p>
   </nav>
-
   <section class="bothcolumns">
     <section class="column-left">
 
       <!-- TOP THIRD -->
       <article class="column-left__range">
-        <p class="column-left__range-and-latest-score"> Set Range</p>
+        <p class="column-left__range-and-latest-score">Set Range</p>
         <div class="range--inputs">
             <label class="range--input-boxes" for="min">
               <span class="column-left__input-header-text">Min Range</span>
@@ -35,19 +34,18 @@
 
       <!-- MIDDLE THIRD -->
       <article class="column-left__users">
-
-        <p class="column-left__range--currentrange-statement">The Current Range is <span class="range--display-numbers">1</span> to <span class="range--display-numbers">100</span> </p>
+        <p class="column-left__range--currentrange-statement">The Current Range is <span class="range--display-numbers displayLow">1</span> to <span class="range--display-numbers displayHigh">100</span> </p>
         
         <p class="column-left__challengerheadertext">Challenger 1</p>
         
         <div class="challenger-one-guesses">
           <label for="name">
             <span class="column-left__input-header-text">Name</span>
-            <input type="text" class="name-entry" id="name">
+            <input type="text" class="name-entry player--name" id="name">
           </label>
           <label for="guess">
             <span class="column-left__input-header-text">Guess</span>
-            <input type="text" class="value-input__guess" id="guess">
+            <input type="text" class="value-input__guess player-1-guess" id="guess">
           </label>
         </div>
 
@@ -56,40 +54,37 @@
         <div class="challenger-two-guesses">
           <label for="name">
             <span class="column-left__input-header-text">Name</span>
-            <input type="text" class="name-entry" id="name">
+            <input type="text" class="name-entry player-two-name" id="name">
           </label>
           <label for="guess">
             <span class="column-left__input-header-text">Guess</span>
-            <input type="text" class="value-input__guess" id="guess">
+            <input type="text" class="value-input__guess player-2-guess" id="guess">
           </label>
         </div>
 
         <div class="middle-box--buttons">
-          <button class="triple-button-style">SUBMIT GUESS</button>
+          <button class="triple-button-style submit-guess">SUBMIT GUESS</button>
           <button class="triple-button-style">RESET GAME</button>
           <button class="triple-button-style">CLEAR GAME</button>
-        </div>
 
+        </div>
       </article>
-
+      
       <!-- BOTTOM THIRD -->
-      <article class="leftsection__scores">
-        <p class="column-left__range-and-latest-score">Latest Score</p>
-         <div class="bottom-section-content">
-          <div class="bottom-section-challenger-one">
-            <p>Challenger 1 Name</p>
-            <p>current guess</p>
-            <p>97</p>
-            <p>that's too high</p>
-          </div>
-          <hr class="vertical-line">
-          <div class="bottom-section-challenger-two">
-            <p>Challenger 2 Name</p>
-            <p>current guess</p>
-            <p>3</p>
-            <p>that's too low</p>
-          </div>
-        </div>
+
+      <article class="leftsection__scores" id="leftsection__scores">
+          <p class="column-left__score"></p>
+     <!--    <section>
+          <p class="display-player-name"></p>
+          <p class="current-guess">current guess</p>
+          <p class ="big-pink-number"></p>
+          <p class="player-result"></p>
+        </section>   -->
+      
+        <!-- <p class="displayPlayerTwo">Challenger 2 Name</p>
+        <p> current guess </p>
+        <p class="BigPinkPLayerTwo">3</p>
+        <p>that's too low</p> -->
       </article>
     </section>
 
@@ -98,4 +93,5 @@
     </section>
   </section>
 </body>
+<script type="text/javascript" src="main.js"></script>
 </html>
