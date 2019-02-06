@@ -9,7 +9,7 @@
 <body>
   <nav class="navbar">
     <h1 class="navbar__txt"><span class="navbar__thick-txt">Number</span>Guesser</h1>
-    <p class="navbar__ultimateedition"><span>ULTIMATE CHALLENGER EDITION</span></p>
+    <p class="navbar__ultimateedition lines"><span>ULTIMATE CHALLENGER EDITION</span></p>
   </nav>
 
   <section class="bothcolumns">
@@ -17,7 +17,7 @@
 
       <!-- TOP THIRD -->
       <article class="column-left__range">
-        <p class="column-left__range-and-latest-score"> Set Range</p>
+        <p class="column-left__range-and-latest-score">Set Range</p>
         <div class="range--inputs">
             <label class="range--input-boxes" for="min">
               <span class="column-left__input-header-text">Min Range</span>
@@ -33,43 +33,60 @@
 
       <!-- MIDDLE THIRD -->
       <article class="column-left__users">
-        <p class="column-left__range--currentrange-statement">The Current Range is <span class="displayLow">1</span> to <span>100</span> </p>
-        <p class="column-left__challengerheadertext"> Challenger 1 </p>
-        <form>
-          <label for="name">
-            <span class="column-left__input-header-text">Name</span>
-            <input type="text" class="name-entry" id="name">
-          </label>
-          <label for="guess">
-            <span class="column-left__input-header-text">Guess</span>
-            <input type="text" class="value-input__guess" id="guess">
-          </label>
-        </form>
-        <p class="column-left__challengerheadertext"> Challenger 2 </p>
-        <form>
-          <label for="name">
-            <span class="column-left__input-header-text">Name</span>
-            <input type="text" class="name-entry" id="name">
-          </label>
-          <label for="guess">
-            <span class="column-left__input-header-text">Guess</span>
-            <input type="text" class="value-input__guess" id="guess">
-          </label>
-        </form>
+        <div class="flex f-column">
+          <p class="column-left__range--currentrange-statement">The Current Range is <span class="displayLow">1</span> to <span class="displayHigh">100</span> </p>
+          <div class="flex">
+            <p class="column-left__challengerheadertext"> Challenger 1 </p>
+            <form>
+              <label for="name">
+                <span class="column-left__input-header-text">Name</span>
+                <input type="text" class="name-entry" id="name">
+              </label>
+              <label for="guess">
+                <span class="column-left__input-header-text">Guess</span>
+                <input type="text" class="value-input__guess" id="guess">
+              </label>
+            </form>
+          </div>
+          <div class="flex">
+            <p class="column-left__challengerheadertext"> Challenger 2 </p>
+            <form>
+              <label for="name">
+                <span class="column-left__input-header-text">Name</span>
+                <input type="text" class="name-entry" id="name">
+              </label>
+              <label for="guess">
+                <span class="column-left__input-header-text">Guess</span>
+                <input type="text" class="value-input__guess" id="guess">
+              </label>
+            </form>
+          </div>
+          <div class="flex jc-space-between">
+            <button id="submit" class="button-users">
+              Submit
+            </button>
+            <button id="reset" class="button-users">
+              Reset
+            </button>
+            <button id="clear" class="button-users">
+              Clear
+            </button>
+          </div>
+        </div>
       </article>
 
       <!-- BOTTOM THIRD -->
       <article class="leftsection__scores">
         <p class="column-left__range-and-latest-score">Latest Score</p>
-        <p>Challenger 1 Name</p>
+        <p class="displayPlayerOne">Challenger 1 Name</p>
         <p> current guess </p>
-        <p>97</p>
+        <p class ="bigPinkPlayerOne">97</p>
         <p>that's too high</p>
         <hr class="vertical-line">
-        <p>Challenger 2 Name</p>
+        <!-- <p class="displayPlayerTwo">Challenger 2 Name</p>
         <p> current guess </p>
-        <p>3</p>
-        <p>that's too low</p>
+        <p class="BigPinkPLayerTwo">3</p>
+        <p>that's too low</p> -->
       </article>
     </section>
 
@@ -78,4 +95,5 @@
     </section>
   </section>
 </body>
+<script type="text/javascript" src="main.js"></script>
 </html>
