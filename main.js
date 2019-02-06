@@ -62,7 +62,7 @@ function displayGuess (player, playerName, playerGuess, result) {
                           <p class="display-player-name">${playerName}</p>
                           <p class="current-guess">current guess</p>
                           <p class="big-pink-number">${playerGuess}</p>
-                          <p class ="player-result">${result}</p>
+                          <p class="player-result">${result}</p>
                         </section>`
   leftSectionScores.insertAdjacentHTML('beforeend', playerResults)
 }

@@ -260,28 +260,51 @@ article.leftsection__scores {
   border: 1px solid #d1d2d4;
 }
 
-div.bottom-section-content {
+.column-left__score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #404041;
+  font-weight: 700;
+  font-size: 1.1rem;
   display: flex;
 }
-
-div.bottom-section-challenger-one {
-  align-items: center;
+.player-one {
+  justify-content: space-between;
+  border-right: 2px solid #f7f7f7;
+  width: 200px;
+  padding: 3rem;
+  margin: 2rem 0;
+}
+.player-two {
+  justify-content: space-between;
+  width: 200px;
+  padding: 3rem;
+  margin: 2rem 0;
+}
+.display-player-name {
+  text-align: center;
+  color: #7f7f7f;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
-div.bottom-section-challenger-two {
+.current-guess {
+  text-align: center;
+
 
 }
 
-.vertical-line {
-  border-left: 1px solid #d1d2d4;
-  height: 85%;
-  width: 1px;
-  margin-left: 50%;
-  margin-top: -14%;
-
+.big-pink-number {
+  color: #dd1972;
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
 }
 
-
+.player-result {
+  text-align: center;
+}
 
 
 
