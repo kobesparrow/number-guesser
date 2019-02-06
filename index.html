@@ -11,22 +11,27 @@
     <h1 class="navbar__txt"><span class="navbar__thick-txt">Number</span>Guesser</h1>
     <p class="navbar__ultimateedition"><span>ULTIMATE CHALLENGER EDITION</span></p>
   </nav>
+
   <section class="bothcolumns">
     <section class="column-left">
+
+      <!-- TOP THIRD -->
       <article class="column-left__range">
         <p class="column-left__range-and-latest-score"> Set Range</p>
-        <form>
-          <label for="min">
-            <span class="column-left__input-header-text">Min Range</span>
-            <input type="text" class="column-left__range--highlowinputs" id="min">
-          </label>
-          <label for="max">
-            <span class="column-left__input-header-text">Max Range</span>
-            <input type="text" class="column-left__range--highlowinputs"id="max">
-          </label>
-          <button>Update</button>
-        </form>
+        <div class="range--inputs">
+            <label class="range--input-boxes" for="min">
+              <span class="column-left__input-header-text">Min Range</span>
+              <input type="text" class="column-left__range--highlowinputs" id="min">
+            </label>
+            <label class="range--input-boxes" for="max">
+              <span class="column-left__input-header-text">Max Range</span>
+              <input type="text" class="column-left__range--highlowinputs"id="max">
+            </label>
+            <button class="button-style">UPDATE</button>
+        </div>
       </article>
+
+      <!-- MIDDLE THIRD -->
       <article class="column-left__users">
         <p class="column-left__range--currentrange-statement">The Current Range is <span class="displayLow">1</span> to <span>100</span> </p>
         <p class="column-left__challengerheadertext"> Challenger 1 </p>
@@ -52,6 +57,8 @@
           </label>
         </form>
       </article>
+
+      <!-- BOTTOM THIRD -->
       <article class="leftsection__scores">
         <p class="column-left__range-and-latest-score">Latest Score</p>
         <p>Challenger 1 Name</p>
@@ -65,6 +72,8 @@
         <p>that's too low</p>
       </article>
     </section>
+
+    <!-- RIGHT COLUMN -->
     <section class="column-right">
     </section>
   </section>

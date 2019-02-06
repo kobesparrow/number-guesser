@@ -55,26 +55,49 @@ body {
 }
 
 .column-left {
-  flex: 50%;
+  width: 50%;
   background-color: #f7f7f7;
   height: 100vh;
   border: 1px solid #404041;
 }
 
 .column-right {
-  display: flex;
-  flex: 50%;
-  background-color: #d1d2d4;
+  width: 50%;  
+  background-color: #D1D2D4;
 }
 
-.column-left__range {
+article.column-left__range {
   background-color: #fff;
   height: 9rem;
   margin: 1rem 1rem;
   border: 1px solid #d1d2d4;
 }
 
-.column-left__range-and-latest-score {
+button.button-style {
+  background-color: #D1D2D4;
+  border-radius: 15px;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  transition-duration: .5s;
+  width: 154px;
+  height: 40px;
+}
+
+button.button-style:hover {
+  background-color: #7F7F7F; 
+}
+
+div.range--inputs {
+  display: flex;
+  align-items: flex-end;
+}
+
+label.range--input-boxes {
+  padding-bottom: 0px;
+}
+
+p.column-left__range-and-latest-score {
   font-weight: 700;
   font-size: 1.2rem;
   color: #404041;
@@ -96,7 +119,6 @@ label {
 .column-left__range--highlowinputs {
   width: 60%; 
   padding: .5rem;
-
 }
 
 .column-left__users {
