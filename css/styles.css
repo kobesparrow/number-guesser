@@ -221,8 +221,12 @@ button.triple-button-style {
       padding-left: 38px;
 }
 
-button.triple-biutto-style:hover {
-  background-color: 
+button.triple-button-style:disabled {
+  background-color:#d0d2d3;
+}
+
+button.triple-button-style:hover {
+  background-color: #dd1972; 
 }
 
 .name-entry {

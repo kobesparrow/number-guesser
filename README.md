@@ -9,7 +9,7 @@ Number Guesser is a dynamic website with multiple user inputs and a variety of u
 
 Number Guesser Doubles finished project by Aidan McKay and Mark R. Collins
 
-(insert photo)
+[![screencapture-file-Users-doc-Turing-Projects-mod-One-number-guess.png](https://i.postimg.cc/gjxBgvxz/screencapture-file-Users-doc-Turing-Projects-mod-One-number-guess.png)](https://postimg.cc/8fVH5fd9)
 
 #### Biggest Win
 
@@ -23,7 +23,7 @@ Perhaps being lulled into a sense of security, we did not apply ourselves to the
 
 Assigned comprehensive layout. Functionality included in assignemnt and available to viewers upon request.
 
-(photo)
+[![week2-numberguesser-01.jpg](https://i.postimg.cc/rFtPWN6g/week2-numberguesser-01.jpg)](https://postimg.cc/3dY1QpxD)
 
 #### Author
 Aidan McKay and Mark R. Collins
