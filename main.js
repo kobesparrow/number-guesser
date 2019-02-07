@@ -19,6 +19,18 @@ var g2 = document.querySelector('#guess2');
 var disableButtons = document.querySelector('.column-left__users');
 var initialMin = document.querySelector('#min');
 var initialMax = document.querySelector('#max');
+var displayLow = document.querySelector('.displayLow');
+var displayHigh = document.querySelector('.displayHigh');
+var parsedNumberOne = Number.parseInt(playerOneGuess.value);
+var parsedNumberTwo = Number.parseInt(playerTwoGuess.value);
+// var min = parseInt(document.querySelector('#min').value);
+// var max = parseInt(document.querySelector('#max').value);
+
+// function displayLowAlert() {
+//  if (displayLow === NaN); {
+//     alert("Please input a number before submitting.");
+//   }
+// } 
 
 
 // UPDATE button event
@@ -27,26 +39,35 @@ updateButton.addEventListener('click', function(e) {
   var min = parseInt(document.querySelector('#min').value);
   var max = parseInt(document.querySelector('#max').value);
   randomNumber = generateRandom(min, max);
-  console.log(min, max)
   updateRangeDisplay(min, max);
-});
-
+  testMaxValue(min, max);
+  // testMinValue(min, max);
+}); 
 
 // Update range display
 function updateRangeDisplay(min, max) {
-  // var minInput = min;
   var displayLow = document.querySelector('.displayLow');
   displayLow.innerText = min;
-  // var maxInput = max;
   var displayHigh = document.querySelector('.displayHigh');
   displayHigh.innerText = max;
 }
 
-// function updateMaxRangeDisplay(max) { 
-  // var maxInput = max;
-  // var displayHigh = document.querySelector('.displayHigh');
-  // displayHigh.innerText = maxInput;
+function testMaxValue(min, max) {
+  if (min > max) {
+    alert("Please input minimum and maximum range sequentially");
+    initialMin.value="";
+    initialMax.value="";
+    displayLow.innerText = "?";
+    displayHigh.innerText = "?";
+  }
+}
+
+// function testMinValue(min, max) {
+//   if (max < min) {
+//     alert("Please adjust Maximum Range appropriately.")
+//   }
 // }
+
 
 // our random number
 function generateRandom(min = 1, max = 100) {
@@ -63,9 +84,14 @@ submitGuessButton.addEventListener('click', function() {
   var checkNumber2 = checkNumber(parsedNumberTwo);
   displayGuess('player-one', playerOneName, parsedNumberOne, checkNumber1);
   displayGuess('player-two', playerTwoName, parsedNumberTwo, checkNumber2);
-  // resetGameButton.disabled=false;
-  // resetGameButton.disabled=false;
+  outsideMax();
 })
+
+function outsideMax() {
+  if (parsedNumberOne >= max); {
+    alert("Please guess a number within the current range.");
+  }
+}
 
 // RESET game event
 resetGameButton.addEventListener('click', function() {

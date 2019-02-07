@@ -88,6 +88,7 @@
 
 .bothcolumns {
   display: flex;
+  justify-content: center;
 }
 
 /*COLUMN LEFT*/
@@ -95,12 +96,11 @@
 .column-left {
   width: 470px;
   background-color: #f7f7f7;
-  height: 100vh;
   border: 1px solid #404041;
 }
 
 .column-right {
-  width: 50%;  
+  width: 470px;  
   background-color: #D1D2D4;
 }
 
