@@ -22,11 +22,11 @@
         <div class="range--inputs">
             <label class="range--input-boxes" for="min">
               <span class="column-left__input-header-text">Min Range</span>
-              <input type="text" class="column-left__range--highlowinputs" id="min">
+              <input type="number" class="column-left__range--highlowinputs" id="min" required>
             </label>
             <label class="range--input-boxes" for="max">
               <span class="column-left__input-header-text">Max Range</span>
-              <input type="text" class="column-left__range--highlowinputs"id="max">
+              <input type="number" class="column-left__range--highlowinputs" id="max" required>
             </label>
             <button class="button-style update-button">UPDATE</button>
         </div>
@@ -45,7 +45,7 @@
           </label>
           <label for="guess">
             <span class="column-left__input-header-text">Guess</span>
-            <input type="text" class="value-input__guess player-1-guess" id="guess1">
+            <input type="number" class="value-input__guess player-1-guess" id="guess1">
           </label>
         </div>
 
@@ -58,7 +58,7 @@
           </label>
           <label for="guess">
             <span class="column-left__input-header-text">Guess</span>
-            <input type="text" class="value-input__guess player-2-guess" id="guess2">
+            <input type="number" class="value-input__guess player-2-guess" id="guess2">
           </label>
         </div>
 
@@ -71,6 +71,7 @@
       </article>
       
       <!-- BOTTOM THIRD -->
+
 
       <article class="leftsection__scores" id="leftsection__scores">
           <p class="column-left__score">Latest Scores</p>
@@ -86,8 +87,6 @@
             <p class="big-pink-number-two">0</p>
             <p class="player-result">Start A Game!</p>
           </section>`
-
-
       </article>
     </section>
 
