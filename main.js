@@ -35,10 +35,25 @@ updateButton.addEventListener('click', function(e) {
   randomNumber = generateRandom(min, max);
   updateRangeDisplay(min, max);
   testMaxValue(min, max);
-  // needNumbersNow(min, max);
-  // testIfNumber(min, max);
-  // required();
+  requiredMinRange();
+  requiredMaxRange();
 }); 
+
+function requiredMinRange() {
+  var noName = document.querySelector('#min').value;
+  if (noName === "") {
+    alert("Please enter a minimum range.")
+    displayLow.innerText = "?";
+  }
+}
+
+function requiredMaxRange() {
+  var noName = document.querySelector('#max').value;
+  if (noName === "") {
+    alert("Please enter a maximum range.")
+    displayHigh.innerText = "?";
+  }
+}
 
 // Update range display
 function updateRangeDisplay(min, max) {
@@ -77,6 +92,8 @@ submitGuessButton.addEventListener('click', function() {
   // outsideMax();
   requiredNamePlayerOne();
   requiredNamePlayerTwo();
+  requiredGuessPlayerOne();
+  requiredGuessPlayerTwo();
 })
 
 function requiredNamePlayerOne() {
@@ -93,6 +110,19 @@ function requiredNamePlayerTwo() {
   }
 }
 
+function requiredGuessPlayerOne() {
+  var noName = document.querySelector('.player-1-guess').value;
+  if (noName === "") {
+    alert("Player one please enter a guess.")
+  }
+}
+
+function requiredGuessPlayerTwo() {
+  var noName = document.querySelector('.player-2-guess').value;
+  if (noName === "") {
+    alert("Player two please enter a guess.")
+  }
+}
 
 
 // function requiredName() {
