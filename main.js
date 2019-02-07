@@ -23,8 +23,6 @@ var displayLow = document.querySelector('.displayLow');
 var displayHigh = document.querySelector('.displayHigh');
 var parsedNumberOne = Number.parseInt(playerOneGuess.value);
 var parsedNumberTwo = Number.parseInt(playerTwoGuess.value);
-// var min = parseInt(document.querySelector('#min').value);
-// var max = parseInt(document.querySelector('#max').value);
 
 
 // UPDATE button event
@@ -89,12 +87,41 @@ submitGuessButton.addEventListener('click', function() {
   var checkNumber2 = checkNumber(parsedNumberTwo);
   displayGuess('player-one', playerOneName, parsedNumberOne, checkNumber1);
   displayGuess('player-two', playerTwoName, parsedNumberTwo, checkNumber2);
-  // outsideMax();
   requiredNamePlayerOne();
   requiredNamePlayerTwo();
   requiredGuessPlayerOne();
   requiredGuessPlayerTwo();
+  guessOutsideRangePlayerOne();
+  guessOutsideRangePlayerTwo();
 })
+
+function guessOutsideRangePlayerOne() {
+  var guessRangeMin = parseInt(document.querySelector('#min').value);
+  var guessRangeMax = parseInt(document.querySelector('#max').value);
+  var numberGuessie = document.querySelector('.player-1-guess').value;
+  if (numberGuessie < guessRangeMin) {
+    alert("Player one guess out of range.");
+    g1.value="";
+  }
+  if (numberGuessie > guessRangeMax) {
+    alert("Player one guess out of range.");
+    g1.value="";
+  }
+}
+
+function guessOutsideRangePlayerTwo() {
+  var guessRangeMin = parseInt(document.querySelector('#min').value);
+  var guessRangeMax = parseInt(document.querySelector('#max').value);
+  var numberGuessie = document.querySelector('.player-2-guess').value;
+  if (numberGuessie < guessRangeMin) {
+    alert("Player two guess out of range.");
+    g2.value="";
+  }
+  if (numberGuessie > guessRangeMax) {
+    alert("Player two guess out of range.");
+    g2.value="";
+  }
+}
 
 function requiredNamePlayerOne() {
   var noName = document.querySelector('.player-one-name').value;
@@ -124,26 +151,6 @@ function requiredGuessPlayerTwo() {
   }
 }
 
-
-// function requiredName() {
-//   var empty = document.querySelector('.player-one-name').value;
-//   if (empty === "") {
-//   alert("Please input a Value");
-//   }
-// }
-
-// function emptyInput() {
-//   if (parsedNumberOne = "") {
-//     alert("Player One");
-//   }
-// }
-
-// function outsideMax() {
-//   if (parsedNumberOne >= max); {
-//     alert("Please guess a number within the current range.");
-//   }
-// }
-
 // RESET game event
 resetGameButton.addEventListener('click', function() {
   clearGame()
@@ -169,8 +176,7 @@ function clearGame() {
   g2.value="";
 }
 
-
-// DISABLED BUTTONS
+// DISABLE BUTTONS
 document.querySelector(".reset-game").disabled = true;
 document.querySelector(".clear-game").disabled = true;
 
