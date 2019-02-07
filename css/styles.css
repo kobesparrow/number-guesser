@@ -285,7 +285,7 @@ article.leftsection__scores {
   padding: 2rem;
   margin: 2rem 0;
 }
-.display-player-name {
+.display-player-name-one, .display-player-name-two {
   text-align: center;
   color: #7f7f7f;
   font-weight: 700;
@@ -296,7 +296,7 @@ article.leftsection__scores {
   text-align: center;
 }
 
-.big-pink-number {
+.big-pink-number-one, .big-pink-number-two {
   color: #dd1972;
   font-size: 4rem;
   font-weight: 700;
