@@ -1,6 +1,3 @@
-GOOD ONE
-
-
 // Global Variables
 
 var playerOneGuess = document.querySelector('.player-1-guess');
