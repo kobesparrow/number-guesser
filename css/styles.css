@@ -40,7 +40,6 @@
   flex-direction: column;
 }
 
-/* NAVBAR     */
 .navbar {
   height: 7rem;
   background-color: #404041;
@@ -62,7 +61,6 @@
   color: #dfdfdf;
 }
 
-/*GENERAL STUFF*/
 .lines span {
   position: relative;
   display: inline-block;
@@ -90,8 +88,6 @@
   display: flex;
   justify-content: center;
 }
-
-/*COLUMN LEFT*/
 
 .column-left {
   width: 470px;
@@ -123,10 +119,6 @@ button.button-style {
     margin-left: 22px;
     margin-right: 20px;
 }
-
-/*button.button-style:hover {
-  background-color: #7F7F7F; 
-}*/
 
 div.range--inputs {
   display: flex;
@@ -164,8 +156,6 @@ label {
   height: 12px;
 }
 
-/*MIDDLE THIRD*/
-
 .column-left__users {
   background-color: #fff;
   height: 18rem;
@@ -175,13 +165,13 @@ label {
 }
 
 p.column-left__challengerheadertext {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #404041;
-    padding: .5rem;
-    margin-bottom: 0px;
-    margin-left: -8px;
-    margin-top: -20px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #404041;
+  padding: .5rem;
+  margin-bottom: 0px;
+  margin-left: -8px;
+  margin-top: -20px;
 }
 
 p.column-left__range--currentrange-statement {
@@ -231,10 +221,6 @@ button.triple-button-style {
       padding-left: 38px;
 }
 
-/*button.triple-button-style:hover {
-  background-color: #7F7F7F; 
-}*/
-
 .name-entry {
   width: 15rem;
   padding: .5rem;
@@ -246,8 +232,6 @@ button.triple-button-style {
   padding: .5rem;
   height: 12px;
 }
-
-/*BOTTOM THIRD*/
 
 article.leftsection__scores {
   background-color: #fff;
@@ -303,21 +287,54 @@ article.leftsection__scores {
   text-align: center;
 }
 
-/*RANDOM STUFF*/
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
+@media screen and (max-width: 500px) {
 
+.bothcolumns {
+  display: flex;
+  flex-direction: column;
+}
 
+.column-right {
+  width: 100%;
+}
 
+.column-left {
+  width: 100%
+}
 
+div.range--inputs {
+  display: flex;
+  flex-direction: column;
+}  
 
+div.challenger-one-guesses {
+  display: flex;
+  flex-direction: column;
+}
 
+div.challenger-two-guesses {
+  display: flex;
+  flex-direction: column;
+}  
 
+div.middle-box--buttons {
+  display: flex;
+  flex-direction: column;
+}
 
+article.leftsection__scores {
+  display: flex;
+  flex-direction: column;
+}
 
+.column-left__users {
+  height: auto;
 
+}
 

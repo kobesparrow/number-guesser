@@ -1,5 +1,3 @@
-// Global Variables
-
 var playerOneGuess = document.querySelector('.player-1-guess');
 var playerTwoGuess = document.querySelector('.player-2-guess');
 var updateButton = document.querySelector('.update-button');
@@ -23,7 +21,6 @@ var parsedNumberOne = Number.parseInt(playerOneGuess.value);
 var parsedNumberTwo = Number.parseInt(playerTwoGuess.value);
 
 
-// UPDATE button event
 updateButton.addEventListener('click', function(e) {
   e.preventDefault();
   var min = parseInt(document.querySelector('#min').value);
@@ -51,7 +48,6 @@ function requiredMaxRange() {
   }
 }
 
-// Update range display
 function updateRangeDisplay(min, max) {
   var displayLow = document.querySelector('.displayLow');
   displayLow.innerText = min;
@@ -70,12 +66,10 @@ function testMaxValue(min, max) {
 }
 
 
-// our random number
 function generateRandom(min = 1, max = 100) {
   return Math.floor(Math.random() * (max - min)) + min;
 } 
 
-// SUBMIT button event
 submitGuessButton.addEventListener('click', function() {
   var playerOneName = document.querySelector('.player-one-name').value;
   var playerTwoName = document.querySelector('.player-two-name').value;
@@ -149,7 +143,6 @@ function requiredGuessPlayerTwo() {
   }
 }
 
-// RESET game event
 resetGameButton.addEventListener('click', function() {
   clearGame()
   generateRandom()
@@ -158,7 +151,6 @@ resetGameButton.addEventListener('click', function() {
   document.querySelector(".reset-game").disabled = true;
 })
 
-// CLEAR button action
 clearGameButton.addEventListener('click', function() {
   p1.value="";
   p2.value="";
@@ -174,7 +166,6 @@ function clearGame() {
   g2.value="";
 }
 
-// DISABLE BUTTONS
 document.querySelector(".reset-game").disabled = true;
 document.querySelector(".clear-game").disabled = true;
 
