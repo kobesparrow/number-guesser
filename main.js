@@ -23,14 +23,6 @@ var displayLow = document.querySelector('.displayLow');
 var displayHigh = document.querySelector('.displayHigh');
 var parsedNumberOne = Number.parseInt(playerOneGuess.value);
 var parsedNumberTwo = Number.parseInt(playerTwoGuess.value);
-// var min = parseInt(document.querySelector('#min').value);
-// var max = parseInt(document.querySelector('#max').value);
-
-// function displayLowAlert() {
-//  if (displayLow === NaN); {
-//     alert("Please input a number before submitting.");
-//   }
-// } 
 
 
 // UPDATE button event
@@ -41,8 +33,25 @@ updateButton.addEventListener('click', function(e) {
   randomNumber = generateRandom(min, max);
   updateRangeDisplay(min, max);
   testMaxValue(min, max);
-  // testMinValue(min, max);
+  requiredMinRange();
+  requiredMaxRange();
 }); 
+
+function requiredMinRange() {
+  var noName = document.querySelector('#min').value;
+  if (noName === "") {
+    alert("Please enter a minimum range.")
+    displayLow.innerText = "?";
+  }
+}
+
+function requiredMaxRange() {
+  var noName = document.querySelector('#max').value;
+  if (noName === "") {
+    alert("Please enter a maximum range.")
+    displayHigh.innerText = "?";
+  }
+}
 
 // Update range display
 function updateRangeDisplay(min, max) {
@@ -62,12 +71,6 @@ function testMaxValue(min, max) {
   }
 }
 
-// function testMinValue(min, max) {
-//   if (max < min) {
-//     alert("Please adjust Maximum Range appropriately.")
-//   }
-// }
-
 
 // our random number
 function generateRandom(min = 1, max = 100) {
@@ -84,12 +87,67 @@ submitGuessButton.addEventListener('click', function() {
   var checkNumber2 = checkNumber(parsedNumberTwo);
   displayGuess('player-one', playerOneName, parsedNumberOne, checkNumber1);
   displayGuess('player-two', playerTwoName, parsedNumberTwo, checkNumber2);
-  outsideMax();
+  requiredNamePlayerOne();
+  requiredNamePlayerTwo();
+  requiredGuessPlayerOne();
+  requiredGuessPlayerTwo();
+  guessOutsideRangePlayerOne();
+  guessOutsideRangePlayerTwo();
 })
 
-function outsideMax() {
-  if (parsedNumberOne >= max); {
-    alert("Please guess a number within the current range.");
+function guessOutsideRangePlayerOne() {
+  var guessRangeMin = parseInt(document.querySelector('#min').value);
+  var guessRangeMax = parseInt(document.querySelector('#max').value);
+  var numberGuessie = document.querySelector('.player-1-guess').value;
+  if (numberGuessie < guessRangeMin) {
+    alert("Player one guess out of range.");
+    g1.value="";
+  }
+  if (numberGuessie > guessRangeMax) {
+    alert("Player one guess out of range.");
+    g1.value="";
+  }
+}
+
+function guessOutsideRangePlayerTwo() {
+  var guessRangeMin = parseInt(document.querySelector('#min').value);
+  var guessRangeMax = parseInt(document.querySelector('#max').value);
+  var numberGuessie = document.querySelector('.player-2-guess').value;
+  if (numberGuessie < guessRangeMin) {
+    alert("Player two guess out of range.");
+    g2.value="";
+  }
+  if (numberGuessie > guessRangeMax) {
+    alert("Player two guess out of range.");
+    g2.value="";
+  }
+}
+
+function requiredNamePlayerOne() {
+  var noName = document.querySelector('.player-one-name').value;
+  if (noName === "") {
+    alert("Player one please enter a name.")
+  }
+}
+
+function requiredNamePlayerTwo() {
+  var noName = document.querySelector('.player-two-name').value;
+  if (noName === "") {
+    alert("Player two please enter a name.")
+  }
+}
+
+function requiredGuessPlayerOne() {
+  var noName = document.querySelector('.player-1-guess').value;
+  if (noName === "") {
+    alert("Player one please enter a guess.")
+  }
+}
+
+function requiredGuessPlayerTwo() {
+  var noName = document.querySelector('.player-2-guess').value;
+  if (noName === "") {
+    alert("Player two please enter a guess.")
   }
 }
 
@@ -118,6 +176,7 @@ function clearGame() {
   g2.value="";
 }
 
+// DISABLE BUTTONS
 document.querySelector(".reset-game").disabled = true;
 document.querySelector(".clear-game").disabled = true;
 
@@ -126,15 +185,6 @@ disableButtons.addEventListener('keyup', function() {
   document.querySelector(".reset-game").disabled = false;
 });
 
-// function disableBtn() {
-//   if (p1.value || p2.value || g1.value || g2.value){
-//     resetGameButton.disabled=false;
-//     clearGameButton.disabled=false;
-//   } else {
-//     resetGameButton.disabled=true;
-//     clearGameButton.disabled=true;
-//   }
-// }
 
 function checkNumber(challengerGuess) {
 if (challengerGuess === randomNumber) {
@@ -155,13 +205,5 @@ function displayGuess (player, playerName, playerGuess, result) {
                         </section>`
   leftSectionScores.insertAdjacentHTML('beforeend', playerResults)
 }
-
-// Not a Number alert
-// if (playerOneGuess === NaN) {
-//   alert("Challenger One, please enter a number");
-// }
-// if (playerTwoGuess === NaN) {
-//   alert("Challenger Two, please enter a number.");
-// }
 
 
