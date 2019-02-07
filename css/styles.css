@@ -3,6 +3,10 @@
   margin: 0;
   font-family: 'Open Sans', sans-serif;
 }
+body {
+  background-color: #d1d2d4;
+}
+
 .button-range {
   border-radius: 40px;
   background-color: #6E6E6E;
@@ -252,7 +256,7 @@ button.triple-button-style:hover {
 
 article.leftsection__scores {
   background-color: #fff;
-  height: 18rem;
+  height: 15rem;
   margin: 1rem 1rem;
   border-right: 1px solid #d1d2d4;
   display: flex;
@@ -273,20 +277,20 @@ article.leftsection__scores {
   justify-content: space-between;
   border-right: 2px solid #f7f7f7;
   width: 200px;
-  padding: 3rem;
+  padding: 2rem;
   margin: 2rem 0;
 }
 .player-two {
   justify-content: space-between;
   width: 200px;
-  padding: 3rem;
+  padding: 2rem;
   margin: 2rem 0;
 }
 .display-player-name {
   text-align: center;
   color: #7f7f7f;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .current-guess {
