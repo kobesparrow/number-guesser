@@ -221,6 +221,10 @@ button.triple-button-style {
       padding-left: 38px;
 }
 
+button.triple-biutto-style:hover {
+  background-color: 
+}
+
 .name-entry {
   width: 15rem;
   padding: .5rem;
