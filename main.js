@@ -1,3 +1,5 @@
+
+
 // Global Variables
 
 var playerOneGuess = document.querySelector('.player-1-guess');
@@ -22,7 +24,6 @@ var displayHigh = document.querySelector('.displayHigh');
 var parsedNumberOne = Number.parseInt(playerOneGuess.value);
 var parsedNumberTwo = Number.parseInt(playerTwoGuess.value);
 
-
 // UPDATE button event
 updateButton.addEventListener('click', function(e) {
   e.preventDefault();
@@ -31,25 +32,7 @@ updateButton.addEventListener('click', function(e) {
   randomNumber = generateRandom(min, max);
   updateRangeDisplay(min, max);
   testMaxValue(min, max);
-  requiredMinRange();
-  requiredMaxRange();
 }); 
-
-function requiredMinRange() {
-  var noName = document.querySelector('#min').value;
-  if (noName === "") {
-    alert("Please enter a minimum range.")
-    displayLow.innerText = "?";
-  }
-}
-
-function requiredMaxRange() {
-  var noName = document.querySelector('#max').value;
-  if (noName === "") {
-    alert("Please enter a maximum range.")
-    displayHigh.innerText = "?";
-  }
-}
 
 // Update range display
 function updateRangeDisplay(min, max) {
@@ -69,7 +52,6 @@ function testMaxValue(min, max) {
   }
 }
 
-
 // our random number
 function generateRandom(min = 1, max = 100) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -79,73 +61,28 @@ function generateRandom(min = 1, max = 100) {
 submitGuessButton.addEventListener('click', function() {
   var playerOneName = document.querySelector('.player-one-name').value;
   var playerTwoName = document.querySelector('.player-two-name').value;
-  var parsedNumberOne = Number.parseInt(playerOneGuess.value);
-  var parsedNumberTwo = Number.parseInt(playerTwoGuess.value);
-  var checkNumber1 = checkNumber(parsedNumberOne);
-  var checkNumber2 = checkNumber(parsedNumberTwo);
-  displayGuess('player-one', playerOneName, parsedNumberOne, checkNumber1);
-  displayGuess('player-two', playerTwoName, parsedNumberTwo, checkNumber2);
-  requiredNamePlayerOne();
-  requiredNamePlayerTwo();
-  requiredGuessPlayerOne();
-  requiredGuessPlayerTwo();
-  guessOutsideRangePlayerOne();
-  guessOutsideRangePlayerTwo();
+  var checkNumber1 = checkNumber(displayResultOne);
+  var checkNumber2 = checkNumber(displayResultTwo);
+  displayGuess();
+  outsideMax();
 })
 
-function guessOutsideRangePlayerOne() {
-  var guessRangeMin = parseInt(document.querySelector('#min').value);
-  var guessRangeMax = parseInt(document.querySelector('#max').value);
-  var numberGuessie = document.querySelector('.player-1-guess').value;
-  if (numberGuessie < guessRangeMin) {
-    alert("Player one guess out of range.");
-    g1.value="";
-  }
-  if (numberGuessie > guessRangeMax) {
-    alert("Player one guess out of range.");
-    g1.value="";
-  }
+function displayGuess (){
+  var displayPlayerNameOne = document.querySelector('.display-player-name-one');
+  displayPlayerNameOne.innerText = document.querySelector('.player-one-name').value;
+  var displayPlayerNameTwo = document.querySelector('.display-player-name-two');
+  displayPlayerNameTwo.innerText = document.querySelector('.player-two-name').value;
+  var displayPlayerGuessOne = document.querySelector('.big-pink-number-one');
+  displayPlayerGuessOne.innerText = document.querySelector('.player-1-guess').value;
+  var displayPlayerGuessTwo = document.querySelector('.big-pink-number-two');
+  displayPlayerGuessTwo.innerText = document.querySelector('.player-2-guess').value;
+  var displayResultOne = document.querySelector('.player-result-one').value;
+  var displayResultTwo = document.querySelector('.player-result-two').value;
 }
 
-function guessOutsideRangePlayerTwo() {
-  var guessRangeMin = parseInt(document.querySelector('#min').value);
-  var guessRangeMax = parseInt(document.querySelector('#max').value);
-  var numberGuessie = document.querySelector('.player-2-guess').value;
-  if (numberGuessie < guessRangeMin) {
-    alert("Player two guess out of range.");
-    g2.value="";
-  }
-  if (numberGuessie > guessRangeMax) {
-    alert("Player two guess out of range.");
-    g2.value="";
-  }
-}
-
-function requiredNamePlayerOne() {
-  var noName = document.querySelector('.player-one-name').value;
-  if (noName === "") {
-    alert("Player one please enter a name.")
-  }
-}
-
-function requiredNamePlayerTwo() {
-  var noName = document.querySelector('.player-two-name').value;
-  if (noName === "") {
-    alert("Player two please enter a name.")
-  }
-}
-
-function requiredGuessPlayerOne() {
-  var noName = document.querySelector('.player-1-guess').value;
-  if (noName === "") {
-    alert("Player one please enter a guess.")
-  }
-}
-
-function requiredGuessPlayerTwo() {
-  var noName = document.querySelector('.player-2-guess').value;
-  if (noName === "") {
-    alert("Player two please enter a guess.")
+function outsideMax() {
+  if (parsedNumberOne >= max); {
+    alert("Please guess a number within the current range.");
   }
 }
 
@@ -174,7 +111,6 @@ function clearGame() {
   g2.value="";
 }
 
-// DISABLE BUTTONS
 document.querySelector(".reset-game").disabled = true;
 document.querySelector(".clear-game").disabled = true;
 
@@ -194,14 +130,14 @@ if (challengerGuess === randomNumber) {
   }
 }
 
-function displayGuess (player, playerName, playerGuess, result) {
-  var playerResults = `<section class="${player}"> 
-                          <p class="display-player-name">${playerName}</p>
-                          <p class="current-guess">current guess</p>
-                          <p class="big-pink-number">${playerGuess}</p>
-                          <p class="player-result">${result}</p>
-                        </section>`
-  leftSectionScores.insertAdjacentHTML('beforeend', playerResults)
-}
+
+  // var gameResults = `<section class="${player}"> 
+  //                         <p class="display-player-name">${playerName}</p>
+  //                         <p class="current-guess">current guess</p>
+  //                         <p class="big-pink-number">${playerGuess}</p>
+  //                         <p class="player-result">${result}</p>
+  //                       </section>`
+  // rightSectionCards.insertAdjacentHTML('beforeend', gameResults)
+
 
 

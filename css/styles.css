@@ -3,6 +3,10 @@
   margin: 0;
   font-family: 'Open Sans', sans-serif;
 }
+body {
+  background-color: #d1d2d4;
+}
+
 .button-range {
   border-radius: 40px;
   background-color: #6E6E6E;
@@ -122,11 +126,12 @@ button.button-style {
     height: 33px;
     margin-left: 22px;
     margin-right: 20px;
+    outline: none;
 }
 
-/*button.button-style:hover {
-  background-color: #7F7F7F; 
-}*/
+button.button-style:hover {
+  background-color: #dd1972; 
+}
 
 div.range--inputs {
   display: flex;
@@ -229,11 +234,16 @@ button.triple-button-style {
       margin-right: 8px;
       padding-right: 38px;
       padding-left: 38px;
+      outline: none;
 }
 
-/*button.triple-button-style:hover {
-  background-color: #7F7F7F; 
-}*/
+button.triple-button-style:disabled {
+  background-color:#d0d2d3;
+}
+
+button.triple-button-style:hover {
+  background-color: #dd1972; 
+}
 
 .name-entry {
   width: 15rem;
@@ -248,10 +258,9 @@ button.triple-button-style {
 }
 
 /*BOTTOM THIRD*/
-
 article.leftsection__scores {
   background-color: #fff;
-  height: 18rem;
+  height: 15rem;
   margin: 1rem 1rem;
   border-right: 1px solid #d1d2d4;
   display: flex;
@@ -272,36 +281,47 @@ article.leftsection__scores {
   justify-content: space-between;
   border-right: 2px solid #f7f7f7;
   width: 200px;
-  padding: 3rem;
+  padding: 2rem;
   margin: 2rem 0;
 }
 .player-two {
   justify-content: space-between;
   width: 200px;
-  padding: 3rem;
+  padding: 2rem;
   margin: 2rem 0;
 }
-.display-player-name {
+.display-player-name-one, .display-player-name-two {
   text-align: center;
   color: #7f7f7f;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .current-guess {
   text-align: center;
 }
 
-.big-pink-number {
+.big-pink-number-one, .big-pink-number-two {
   color: #dd1972;
   font-size: 4rem;
   font-weight: 700;
   text-align: center;
 }
 
-.player-result {
+.player-result-one, .player-result-two {
   text-align: center;
 }
+
+.card {
+  width: auto;
+  background-color: #fff;
+  height: 15rem;
+  margin: 2rem;
+}
+
+
+
+
 
 /*RANDOM STUFF*/
 input[type=number]::-webkit-inner-spin-button,
@@ -309,6 +329,7 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 
 
 
