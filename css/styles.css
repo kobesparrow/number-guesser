@@ -3,10 +3,6 @@
   margin: 0;
   font-family: 'Open Sans', sans-serif;
 }
-body {
-  background-color: #d1d2d4;
-}
-
 .button-range {
   border-radius: 40px;
   background-color: #6E6E6E;
@@ -252,9 +248,10 @@ button.triple-button-style {
 }
 
 /*BOTTOM THIRD*/
+
 article.leftsection__scores {
   background-color: #fff;
-  height: 15rem;
+  height: 18rem;
   margin: 1rem 1rem;
   border-right: 1px solid #d1d2d4;
   display: flex;
@@ -275,27 +272,27 @@ article.leftsection__scores {
   justify-content: space-between;
   border-right: 2px solid #f7f7f7;
   width: 200px;
-  padding: 2rem;
+  padding: 3rem;
   margin: 2rem 0;
 }
 .player-two {
   justify-content: space-between;
   width: 200px;
-  padding: 2rem;
+  padding: 3rem;
   margin: 2rem 0;
 }
-.display-player-name-one, .display-player-name-two {
+.display-player-name {
   text-align: center;
   color: #7f7f7f;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .current-guess {
   text-align: center;
 }
 
-.big-pink-number-one, .big-pink-number-two {
+.big-pink-number {
   color: #dd1972;
   font-size: 4rem;
   font-weight: 700;
@@ -312,7 +309,6 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
 
 
 

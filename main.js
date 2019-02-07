@@ -1,3 +1,4 @@
+GOOD ONE
 
 
 // Global Variables
@@ -85,23 +86,6 @@ submitGuessButton.addEventListener('click', function() {
   var parsedNumberTwo = Number.parseInt(playerTwoGuess.value);
   var checkNumber1 = checkNumber(parsedNumberOne);
   var checkNumber2 = checkNumber(parsedNumberTwo);
-  displayGuess();
-  outsideMax();
-})
-function displayGuess (){
-  var displayPlayerNameOne = document.querySelector('.display-player-name-one');
-  displayPlayerNameOne.innerText = document.querySelector('.player-one-name').value;
-  var displayPlayerNameTwo = document.querySelector('.display-player-name-two');
-  displayPlayerNameTwo.innerText = document.querySelector('.player-two-name').value;
-  var displayPlayerGuessOne = document.querySelector('.big-pink-number-one');
-  displayPlayerGuessOne = document.querySelector(playerOneGuess).value;
-  var displayPlayerGuessTwo = document.querySelector('.big-pink-number-two');
-  displayPlayerGuessOne = document.querySelector(playerTwoGuess).value;
-}
-function outsideMax() {
-  if (parsedNumberOne >= max); {
-    alert("Please guess a number within the current range.");
-
   displayGuess('player-one', playerOneName, parsedNumberOne, checkNumber1);
   displayGuess('player-two', playerTwoName, parsedNumberTwo, checkNumber2);
   requiredNamePlayerOne();
@@ -110,7 +94,7 @@ function outsideMax() {
   requiredGuessPlayerTwo();
   guessOutsideRangePlayerOne();
   guessOutsideRangePlayerTwo();
-}
+})
 
 function guessOutsideRangePlayerOne() {
   var guessRangeMin = parseInt(document.querySelector('#min').value);
@@ -213,14 +197,14 @@ if (challengerGuess === randomNumber) {
   }
 }
 
-
-  // var gameResults = `<section class="${player}"> 
-  //                         <p class="display-player-name">${playerName}</p>
-  //                         <p class="current-guess">current guess</p>
-  //                         <p class="big-pink-number">${playerGuess}</p>
-  //                         <p class="player-result">${result}</p>
-  //                       </section>`
-  rightSectionCards.insertAdjacentHTML('beforeend', gameResults)
-
+function displayGuess (player, playerName, playerGuess, result) {
+  var playerResults = `<section class="${player}"> 
+                          <p class="display-player-name">${playerName}</p>
+                          <p class="current-guess">current guess</p>
+                          <p class="big-pink-number">${playerGuess}</p>
+                          <p class="player-result">${result}</p>
+                        </section>`
+  leftSectionScores.insertAdjacentHTML('beforeend', playerResults)
+}
 
 
