@@ -26,12 +26,6 @@ var parsedNumberTwo = Number.parseInt(playerTwoGuess.value);
 // var min = parseInt(document.querySelector('#min').value);
 // var max = parseInt(document.querySelector('#max').value);
 
-// function displayLowAlert() {
-//  if (displayLow === NaN); {
-//     alert("Please input a number before submitting.");
-//   }
-// } 
-
 
 // UPDATE button event
 updateButton.addEventListener('click', function(e) {
@@ -41,7 +35,9 @@ updateButton.addEventListener('click', function(e) {
   randomNumber = generateRandom(min, max);
   updateRangeDisplay(min, max);
   testMaxValue(min, max);
-  // testMinValue(min, max);
+  // needNumbersNow(min, max);
+  // testIfNumber(min, max);
+  // required();
 }); 
 
 // Update range display
@@ -62,12 +58,6 @@ function testMaxValue(min, max) {
   }
 }
 
-// function testMinValue(min, max) {
-//   if (max < min) {
-//     alert("Please adjust Maximum Range appropriately.")
-//   }
-// }
-
 
 // our random number
 function generateRandom(min = 1, max = 100) {
@@ -84,14 +74,45 @@ submitGuessButton.addEventListener('click', function() {
   var checkNumber2 = checkNumber(parsedNumberTwo);
   displayGuess('player-one', playerOneName, parsedNumberOne, checkNumber1);
   displayGuess('player-two', playerTwoName, parsedNumberTwo, checkNumber2);
-  outsideMax();
+  // outsideMax();
+  requiredNamePlayerOne();
+  requiredNamePlayerTwo();
 })
 
-function outsideMax() {
-  if (parsedNumberOne >= max); {
-    alert("Please guess a number within the current range.");
+function requiredNamePlayerOne() {
+  var noName = document.querySelector('.player-one-name').value;
+  if (noName === "") {
+    alert("Player one please enter a name.")
   }
 }
+
+function requiredNamePlayerTwo() {
+  var noName = document.querySelector('.player-two-name').value;
+  if (noName === "") {
+    alert("Player two please enter a name.")
+  }
+}
+
+
+
+// function requiredName() {
+//   var empty = document.querySelector('.player-one-name').value;
+//   if (empty === "") {
+//   alert("Please input a Value");
+//   }
+// }
+
+// function emptyInput() {
+//   if (parsedNumberOne = "") {
+//     alert("Player One");
+//   }
+// }
+
+// function outsideMax() {
+//   if (parsedNumberOne >= max); {
+//     alert("Please guess a number within the current range.");
+//   }
+// }
 
 // RESET game event
 resetGameButton.addEventListener('click', function() {
@@ -118,6 +139,8 @@ function clearGame() {
   g2.value="";
 }
 
+
+// DISABLED BUTTONS
 document.querySelector(".reset-game").disabled = true;
 document.querySelector(".clear-game").disabled = true;
 
@@ -126,15 +149,6 @@ disableButtons.addEventListener('keyup', function() {
   document.querySelector(".reset-game").disabled = false;
 });
 
-// function disableBtn() {
-//   if (p1.value || p2.value || g1.value || g2.value){
-//     resetGameButton.disabled=false;
-//     clearGameButton.disabled=false;
-//   } else {
-//     resetGameButton.disabled=true;
-//     clearGameButton.disabled=true;
-//   }
-// }
 
 function checkNumber(challengerGuess) {
 if (challengerGuess === randomNumber) {
@@ -155,13 +169,5 @@ function displayGuess (player, playerName, playerGuess, result) {
                         </section>`
   leftSectionScores.insertAdjacentHTML('beforeend', playerResults)
 }
-
-// Not a Number alert
-// if (playerOneGuess === NaN) {
-//   alert("Challenger One, please enter a number");
-// }
-// if (playerTwoGuess === NaN) {
-//   alert("Challenger Two, please enter a number.");
-// }
 
 
